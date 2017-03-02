@@ -66,7 +66,7 @@ foreach (<>) {
 	next if $nr++ < $headerlines;
 	chomp;
 
-	if (m/^\s*(\d+)+$/) {
+	if (m/^\s*([0-9]*\.?[0-9]+)+$/) {
 		my $count = $1;
 		my $joined = join(";", @stack);
 
